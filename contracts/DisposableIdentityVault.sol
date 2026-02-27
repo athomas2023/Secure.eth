@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT AND Proprietary
-// © 2026 Andrew Thomas. All Rights Reserved. 
+// © 2026 Andrew Austin Thomas / Secure.eth . All Rights Reserved. 
 // This software is proprietary. Unauthorized copying is prohibited.
 
 

@@ -229,11 +229,11 @@
 	},
 	"sources": {
 		"contracts/DisposableIdentityVault.sol": {
-			"keccak256": "0x9210f9585d5489bf699ffe14ae2b870a3acfce5cdf507a57ed5e6c53f091c710",
+			"keccak256": "0x54051812d23ca491634e272fdf662f00b694ce64dca728501b729d824c56d964",
 			"license": "MIT AND Proprietary",
 			"urls": [
-				"bzz-raw://e7c97cd4559d9826712a212fc585755e6d5614904bd8ea2b532c98d1adb74d82",
-				"dweb:/ipfs/QmeYeBqhxCTdCTdPstxJGTZPzgS8tBHuxszi68x9Saahz8"
+				"bzz-raw://1aa1bb440a71fccfa6e3142589700d71e1631a6288ea94540dad43b6191ac596",
+				"dweb:/ipfs/QmcwVgoxzoujrqkY28TrHBXe31J1yao1axScaV71fX8pUr"
 			]
 		}
 	},
