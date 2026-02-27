@@ -1,0 +1,241 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "code",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "business",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "feePaid",
+						"type": "uint256"
+					}
+				],
+				"name": "AccessLogged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "FeeWithdrawn",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "code",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenGenerated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "accessFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_code",
+						"type": "uint256"
+					}
+				],
+				"name": "businessRecall",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_code",
+						"type": "uint256"
+					}
+				],
+				"name": "checkTokenStatus",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "_encryptedSecret",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_count",
+						"type": "uint256"
+					}
+				],
+				"name": "generateAndStore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "isCodeActive",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newFeeInWei",
+						"type": "uint256"
+					}
+				],
+				"name": "setAccessFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "Secure storage for encrypted PII (SSN/IDs) using disposable pseudo-codes. This version includes a pay-to-access model and \"Burn-on-Read\" functionality.",
+			"kind": "dev",
+			"methods": {
+				"businessRecall(uint256)": {
+					"details": "Step 3: Business pays to access data. Logic: Release data -> Burn Token -> Collect Fee."
+				},
+				"checkTokenStatus(uint256)": {
+					"details": "Step 2: Public verification.  Businesses can check if a QR code/token is still valid before paying."
+				},
+				"generateAndStore(bytes,uint256)": {
+					"details": "Step 1: User/Admin stores the encrypted data. Takes an encrypted 'blob' and a desired number of disposable codes."
+				},
+				"setAccessFee(uint256)": {
+					"details": "Step 4: Monetization. Owner can change the access fee based on market value."
+				}
+			},
+			"title": "DisposableIdentityVault",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/DisposableIdentityVault.sol": "DisposableIdentityVault"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/DisposableIdentityVault.sol": {
+			"keccak256": "0x9210f9585d5489bf699ffe14ae2b870a3acfce5cdf507a57ed5e6c53f091c710",
+			"license": "MIT AND Proprietary",
+			"urls": [
+				"bzz-raw://e7c97cd4559d9826712a212fc585755e6d5614904bd8ea2b532c98d1adb74d82",
+				"dweb:/ipfs/QmeYeBqhxCTdCTdPstxJGTZPzgS8tBHuxszi68x9Saahz8"
+			]
+		}
+	},
+	"version": 1
+}
